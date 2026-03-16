@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leviosa</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪄</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Nitin yadav.....</p>
+    </div>
+
+    <div class="container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="canvas"></canvas>
+        <div id="three-canvas"></div>
+    </div>
+
+    <!-- No-hands hint -->
+    <div id="hands-hint">✋ Raise your hands to interact</div>
+
+    <!-- Info button -->
+    <button id="info-btn" onclick="document.getElementById('info-popup').classList.toggle('visible')" aria-label="Info">i</button>
+    <div id="info-popup">
+        <div class="info-header">
+            <div class="info-top">
+                <img src="https://github.com/LakshAgrawal28.png" alt="Laksh Agrawal" class="info-avatar">
+                <div class="info-text">
+                    <p class="info-name">Laksh Agrawal</p>
+                    <div class="info-links">
+                        <a href="https://github.com/LakshAgrawal28" target="_blank">GitHub</a>
+                        <a href="https://www.linkedin.com/in/laksh-agrawal-873598324/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <p class="info-bio">Made with ❤️ by Laksh Agrawal</p>
+        </div>
+        <hr class="info-divider">
+        <div class="gesture-row"><span>Right open</span><span>Pinch to resize</span></div>
+        <div class="gesture-row"><span>Right fist</span><span>Random color</span></div>
+        <div class="gesture-row"><span>Left fist</span><span>Cycle shapes</span></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="config.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/webcam.js"></script>
+    <script src="js/gestures.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/mediapipe.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
